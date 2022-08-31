@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/horizon-ui-chakra-ts/static/css/main.4c291f98.css",
-    "main.js": "/horizon-ui-chakra-ts/static/js/main.eb7d5d77.js",
+    "main.js": "/horizon-ui-chakra-ts/static/js/main.958e2735.js",
     "static/media/auth.png": "/horizon-ui-chakra-ts/static/media/auth.20d5979b439e1531640d.png",
     "static/media/NftBanner1.png": "/horizon-ui-chakra-ts/static/media/NftBanner1.87062366f75bedd52bd2.png",
     "static/media/Nft2.png": "/horizon-ui-chakra-ts/static/media/Nft2.7897c45d2601ee3adfb5.png",
@@ -21,10 +21,10 @@
     "static/media/Project1.png": "/horizon-ui-chakra-ts/static/media/Project1.d5952144f76e2cb9e5d6.png",
     "index.html": "/horizon-ui-chakra-ts/index.html",
     "main.4c291f98.css.map": "/horizon-ui-chakra-ts/static/css/main.4c291f98.css.map",
-    "main.eb7d5d77.js.map": "/horizon-ui-chakra-ts/static/js/main.eb7d5d77.js.map"
+    "main.958e2735.js.map": "/horizon-ui-chakra-ts/static/js/main.958e2735.js.map"
   },
   "entrypoints": [
     "static/css/main.4c291f98.css",
-    "static/js/main.eb7d5d77.js"
+    "static/js/main.958e2735.js"
   ]
 }
