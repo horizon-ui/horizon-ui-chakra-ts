@@ -36,8 +36,8 @@ import PieCard from 'views/admin/default/components/PieCard';
 import Tasks from 'views/admin/default/components/Tasks';
 import TotalSpent from 'views/admin/default/components/TotalSpent';
 import WeeklyRevenue from 'views/admin/default/components/WeeklyRevenue';
-import { columnsDataCheck, columnsDataComplex } from 'views/admin/default/variables/columnsData';
-import tableDataCheck from 'views/admin/default/variables/tableDataCheck.json';
+import { columnsDataComplex } from 'views/admin/default/variables/columnsData';
+import tableDataCheck from 'views/admin/default/variables/tableDataCheck';
 import tableDataComplex from 'views/admin/default/variables/tableDataComplex.json';
 
 export default function UserReports() {
@@ -119,7 +119,7 @@ export default function UserReports() {
 				<WeeklyRevenue />
 			</SimpleGrid>
 			<SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-				<CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
+				<CheckTable tableData={tableDataCheck} />
 				<SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
 					<DailyTraffic />
 					<PieCard />
