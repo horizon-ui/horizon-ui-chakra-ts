@@ -125,7 +125,7 @@ export default function CheckTable(props: { tableData: any }) {
 				<Menu />
 			</Flex>
 			<Box>
-				<Table variant='simple' color='gray.500' mb='24px'>
+				<Table variant='simple' color='gray.500' mb='24px' mt="12px">
 					<Thead>
 						{table.getHeaderGroups().map((headerGroup) => (
 							<Tr key={headerGroup.id}>

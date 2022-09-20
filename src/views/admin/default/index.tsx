@@ -36,9 +36,8 @@ import PieCard from 'views/admin/default/components/PieCard';
 import Tasks from 'views/admin/default/components/Tasks';
 import TotalSpent from 'views/admin/default/components/TotalSpent';
 import WeeklyRevenue from 'views/admin/default/components/WeeklyRevenue';
-import { columnsDataComplex } from 'views/admin/default/variables/columnsData';
 import tableDataCheck from 'views/admin/default/variables/tableDataCheck';
-import tableDataComplex from 'views/admin/default/variables/tableDataComplex.json';
+import tableDataComplex from 'views/admin/default/variables/tableDataComplex';
 
 export default function UserReports() {
 	// Chakra Color Mode
@@ -126,7 +125,7 @@ export default function UserReports() {
 				</SimpleGrid>
 			</SimpleGrid>
 			<SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-				<ComplexTable columnsData={columnsDataComplex} tableData={tableDataComplex} />
+				<ComplexTable tableData={tableDataComplex} />
 				<SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
 					<Tasks />
 					<MiniCalendar h='100%' minW='100%' selectRange={false} />
