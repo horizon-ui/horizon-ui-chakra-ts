@@ -1,4 +1,4 @@
-type Task = {
+type RowObj = {
 	name: [string, boolean];
 	progress: string;
 	quantity: number;
@@ -6,7 +6,7 @@ type Task = {
 	info: boolean;
 };
 
-const tableDataCheck: Task[] = [
+const tableDataCheck: RowObj[] = [
 	{
 		name: [ 'Horizon UI PRO', true ],
 		quantity: 2458,

@@ -16,14 +16,14 @@ import { MdCancel, MdCheckCircle, MdOutlineError } from 'react-icons/md';
 
 
 
-type Task = {
+type RowObj = {
 	name: string;
 	status: string;
 	date: string; 
 	progress: number;
 };
 
-const columnHelper = createColumnHelper<Task>();
+const columnHelper = createColumnHelper<RowObj>();
 
 // const columns = columnsDataCheck;
 export default function ComplexTable(props: { tableData: any }) {

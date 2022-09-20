@@ -1,11 +1,11 @@
-type Task = {
+type RowObj = {
 	name: string;
 	progress: string;
 	quantity: number;
 	date: string; 
 };
 
-const tableDataColumns: Task[] = [
+const tableDataColumns: RowObj[] = [
 	{
 		name: 'Horizon UI PRO',
 		quantity: 2458,

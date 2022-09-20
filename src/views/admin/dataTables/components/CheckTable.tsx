@@ -14,7 +14,7 @@ import {
 import Card from 'components/card/Card';
 import Menu from 'components/menu/MainMenu';
 
-type Task = {
+type RowObj = {
 	name: [string, boolean];
 	progress: string;
 	quantity: number;
@@ -22,7 +22,7 @@ type Task = {
 	info: boolean;
 };
  
-const columnHelper = createColumnHelper<Task>();
+const columnHelper = createColumnHelper<RowObj>();
 
 // const columns = columnsDataCheck;
 export default function CheckTable(props: { tableData: any }) {
