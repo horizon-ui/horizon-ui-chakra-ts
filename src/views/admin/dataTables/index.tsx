@@ -26,10 +26,10 @@ import DevelopmentTable from 'views/admin/dataTables/components/DevelopmentTable
 import CheckTable from 'views/admin/dataTables/components/CheckTable';
 import ColumnsTable from 'views/admin/dataTables/components/ColumnsTable';
 import ComplexTable from 'views/admin/dataTables/components/ComplexTable';
-import { columnsDataDevelopment, columnsDataColumns } from 'views/admin/dataTables/variables/columnsData';
+import { columnsDataDevelopment  } from 'views/admin/dataTables/variables/columnsData';
 import tableDataDevelopment from 'views/admin/dataTables/variables/tableDataDevelopment.json';
 import tableDataCheck from 'views/admin/dataTables/variables/tableDataCheck';
-import tableDataColumns from 'views/admin/dataTables/variables/tableDataColumns.json';
+import tableDataColumns from 'views/admin/dataTables/variables/tableDataColumns';
 import tableDataComplex from 'views/admin/dataTables/variables/tableDataComplex';
 
 export default function Settings() {
@@ -39,7 +39,7 @@ export default function Settings() {
 			<SimpleGrid mb='20px' columns={{ sm: 1, md: 2 }} spacing={{ base: '20px', xl: '20px' }}>
 				<DevelopmentTable columnsData={columnsDataDevelopment} tableData={tableDataDevelopment} />
 				<CheckTable tableData={tableDataCheck} />
-				<ColumnsTable columnsData={columnsDataColumns} tableData={tableDataColumns} />
+				<ColumnsTable  tableData={tableDataColumns} />
 				<ComplexTable tableData={tableDataComplex} />
 			</SimpleGrid>
 		</Box>
