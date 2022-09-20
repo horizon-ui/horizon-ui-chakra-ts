@@ -143,9 +143,9 @@ export default function ComplexTable(props: { tableData: any }) {
 	});
 	return (
 		<Card flexDirection='column' w='100%' px='0px' overflowX={{ sm: 'scroll', lg: 'hidden' }}>
-			<Flex px='25px' justifyContent='space-between' align='center'>
+			<Flex px='25px' mb="8px" justifyContent='space-between' align='center'>
 				<Text color={textColor} fontSize='22px' fontWeight='700' lineHeight='100%'>
-					Check Table
+					Complex Table
 				</Text>
 				<Menu />
 			</Flex>
@@ -159,7 +159,7 @@ export default function ComplexTable(props: { tableData: any }) {
 										<Th
 											key={header.id}
 											colSpan={header.colSpan}
-											pe='10px'
+											pe='10px' 
 											borderColor={borderColor}
 											cursor='pointer'
 											onClick={header.column.getToggleSortingHandler()}>
