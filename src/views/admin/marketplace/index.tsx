@@ -43,8 +43,7 @@ import Avatar1 from 'assets/img/avatars/avatar1.png';
 import Avatar2 from 'assets/img/avatars/avatar2.png';
 import Avatar3 from 'assets/img/avatars/avatar3.png';
 import Avatar4 from 'assets/img/avatars/avatar4.png';
-import tableDataTopCreators from 'views/admin/marketplace/variables/tableDataTopCreators.json';
-import { tableColumnsTopCreators } from 'views/admin/marketplace/variables/tableColumnsTopCreators';
+import tableDataTopCreators from 'views/admin/marketplace/variables/tableDataTopCreators'; 
 
 export default function Marketplace() {
 	// Chakra Color Mode
@@ -79,24 +78,24 @@ export default function Marketplace() {
 									color={textColorBrand}
 									fontWeight='500'
 									me={{ base: '34px', md: '44px' }}
-									to='#art'>
+									href='#art'>
 									Art
 								</Link>
 								<Link
 									color={textColorBrand}
 									fontWeight='500'
 									me={{ base: '34px', md: '44px' }}
-									to='#music'>
+									href='#music'>
 									Music
 								</Link>
 								<Link
 									color={textColorBrand}
 									fontWeight='500'
 									me={{ base: '34px', md: '44px' }}
-									to='#collectibles'>
+									href='#collectibles'>
 									Collectibles
 								</Link>
-								<Link color={textColorBrand} fontWeight='500' to='#sports'>
+								<Link color={textColorBrand} fontWeight='500' href='#sports'>
 									Sports
 								</Link>
 							</Flex>
@@ -160,7 +159,7 @@ export default function Marketplace() {
 				</Flex>
 				<Flex flexDirection='column' gridArea={{ xl: '1 / 3 / 2 / 4', '2xl': '1 / 2 / 2 / 3' }}>
 					<Card px='0px' mb='20px'>
-						<TableTopCreators tableData={tableDataTopCreators} columnsData={tableColumnsTopCreators} />
+						<TableTopCreators tableData={tableDataTopCreators}  />
 					</Card>
 					<Card p='0px'>
 						<Flex
