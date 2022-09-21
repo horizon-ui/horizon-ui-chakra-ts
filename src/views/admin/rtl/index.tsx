@@ -37,9 +37,8 @@ import PieCard from 'views/admin/rtl/components/PieCard';
 import Tasks from 'views/admin/rtl/components/Tasks';
 import TotalSpent from 'views/admin/rtl/components/TotalSpent';
 import WeeklyRevenue from 'views/admin/rtl/components/WeeklyRevenue';
-import { columnsDataCheck, columnsDataComplex } from 'views/admin/rtl/variables/columnsData';
-import tableDataCheck from 'views/admin/rtl/variables/tableDataCheck.json';
-import tableDataComplex from 'views/admin/rtl/variables/tableDataComplex.json';
+import tableDataCheck from 'views/admin/rtl/variables/tableDataCheck';
+import tableDataComplex from 'views/admin/rtl/variables/tableDataComplex';
 
 export default function UserReports() {
 	// Chakra Color Mode
@@ -120,14 +119,14 @@ export default function UserReports() {
 				<WeeklyRevenue />
 			</SimpleGrid>
 			<SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-				<CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
+				<CheckTable tableData={tableDataCheck} />
 				<SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
 					<DailyTraffic />
 					<PieCard />
 				</SimpleGrid>
 			</SimpleGrid>
 			<SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-				<ComplexTable columnsData={columnsDataComplex} tableData={tableDataComplex} />
+				<ComplexTable tableData={tableDataComplex} />
 				<SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
 					<Tasks />
 					<MiniCalendar h='100%' minW='100%' selectRange={false} />
