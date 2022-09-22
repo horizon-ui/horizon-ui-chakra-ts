@@ -29,6 +29,9 @@ With Horizon UI you will find many examples for pages like NFTs Pages,
 Authentication Pages, Profile and so on. Just choose between a Basic Design or a
 cover and you are good to go!
 
+### 🎉 [NEW] React Tables V8
+Horizon is also using the latest version of the React Tables (v8) library, you can access it by cloning the [/feature/react-table-v8](https://github.com/horizon-ui/horizon-ui-chakra-ts/tree/feature/react-table-v8) branch!
+
 ### 🎉 [NEW] Horizon UI Components
 All the main components from both versions, this will help you to see and interact with all & the latest added components of Horizon (also, new components are on the way, stay tuned)! ⚡️
 <a href="https://horizon-ui.com/components/?ref=readme-horizon-ts" target="_blank">See all components</a>
