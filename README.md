@@ -81,7 +81,7 @@ pages here.</a>
 
 | Free Version                                                                                                       | PRO Version                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
-| [![Horizon UI](https://i.ibb.co/34p7k1p/introduction-image-ts.png)](https://www.horizon-ui.com/?ref=readme-horizon-ts) | [![Horizon UI PRO](https://i.ibb.co/R6jFKRM/introduction-image-1.png)](https://www.horizon-ui.com/pro?ref=readme-horizon-ts) |
+| [![Horizon UI](https://i.ibb.co/34p7k1p/introduction-image-ts.png)](https://www.horizon-ui.com/?ref=readme-horizon-ts) | [![Horizon UI PRO](https://i.ibb.co/8sk6kNS/introduction-image-5.png)](https://www.horizon-ui.com/pro?ref=readme-horizon-ts) |
 
 ### Figma Version
 
