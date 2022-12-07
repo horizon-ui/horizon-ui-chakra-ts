@@ -6,7 +6,7 @@ import AdminNavbarLinks from 'components/navbar/NavbarLinksAdmin';
 
 export default function AdminNavbar(props: {
 	secondary: boolean;
-	message: string|boolean;
+	message: string | boolean;
 	brandText: string;
 	logoText: string;
 	fixed: boolean;
@@ -22,12 +22,12 @@ export default function AdminNavbar(props: {
 		};
 	});
 
-	const { secondary,  brandText } = props;
+	const { secondary, brandText } = props;
 
 	// Here are all the props that may change depending on navbar's type or state.(secondary, variant, scrolled)
 	let mainText = useColorModeValue('navy.700', 'white');
 	let secondaryText = useColorModeValue('gray.700', 'white');
-	let navbarPosition = 'fixed' as const;
+	const navbarPosition = 'fixed';
 	let navbarFilter = 'none';
 	let navbarBackdrop = 'blur(20px)';
 	let navbarShadow = 'none';
@@ -78,7 +78,7 @@ export default function AdminNavbar(props: {
 				xl: '12px'
 			}}
 			pt='8px'
-			top={{ base: '12px', md: '16px', xl: '18px' }}
+			top={{ base: '12px', md: '16px', lg: '68px' }}
 			w={{
 				base: 'calc(100vw - 6%)',
 				md: 'calc(100vw - 8%)',
@@ -129,13 +129,9 @@ export default function AdminNavbar(props: {
 					</Link>
 				</Box>
 				<Box ms='auto' w={{ sm: '100%', md: 'unset' }}>
-					<AdminNavbarLinks
-						onOpen={props.onOpen} 
-						secondary={props.secondary}
-						fixed={props.fixed} 
-					/>
+					<AdminNavbarLinks onOpen={props.onOpen} secondary={props.secondary} fixed={props.fixed} />
 				</Box>
-			</Flex> 
+			</Flex>
 		</Box>
 	);
 }
