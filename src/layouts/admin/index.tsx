@@ -60,36 +60,7 @@ export default function Dashboard(props: { [x: string]: any }) {
 	const { onOpen } = useDisclosure();
 	return (
 		<Box>
-			<Box
-				display={{ sm: 'none', lg: 'flex' }}
-				zIndex='1000'
-				// bg='linear-gradient(rgb(96, 60, 255) 0%, rgb(54, 9, 255) 100%)'
-				bgImage={`url(${Announcement})`}
-				position='fixed'
-				h='50px'
-				width='100%'
-				alignItems='center'
-				justifyContent='center'>
-				<Text size='md' fontWeight='700' color='white'>
-					{/* This is a live preview of the PRO Version - Get access to all those
-          features with Horizon PRO! */}
-					{/* Cyber Monday 50% Discount to Horizon PRO | Limited offer - Lifetime access */}
-					Winter Special 35% Discount to Horizon PRO | Limited offer - Lifetime access
-				</Text>
-				<Button
-					ms='10px'
-					h='30px'
-					w='110px'
-					bg='whiteAlpha.300'
-					_hover={{ bg: 'whiteAlpha.400' }}
-					_active={{ bg: 'whiteAlpha.400' }}
-					color='white'>
-					<Link isExternal href='https://horizon-ui.com/pro?ref=bf-live-preview-pro-announcement'>
-						Grab Offer
-					</Link>
-				</Button>
-			</Box>
-			<Box pt={{ sm: '0px', lg: '50px' }}>
+			<Box>
 				<SidebarContext.Provider
 					value={{
 						toggleSidebar,
