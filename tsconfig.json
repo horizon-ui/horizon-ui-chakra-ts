@@ -23,23 +23,23 @@
   //   "isolatedModules": true,
   //   "noEmit": true,
   //   "jsx": "react-jsx",
-  // }, 
+  // },
   "compilerOptions": {
     "typeRoots": ["node_modules/@types", "src/types"],
     "target": "es2016",
     "lib": ["dom", "dom.iterable", "esnext", "es2015.iterable"],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": false,
     "jsx": "react-jsx",
     "noImplicitAny": true,
     "noImplicitThis": true,
@@ -48,9 +48,7 @@
     "baseUrl": "src",
     "paths": {
       "@assets/*": ["./src/assetsassets/*"]
-    },
+    }
   },
-  "include": [
-    "./src"
-  ], 
+  "include": ["./src"]
 }
