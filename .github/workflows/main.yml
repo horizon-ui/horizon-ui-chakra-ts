@@ -6,7 +6,7 @@ name: Mamba Admin Panel Production CI/CD deployment
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [main]
+    branches: [feature/react-table-v8]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
