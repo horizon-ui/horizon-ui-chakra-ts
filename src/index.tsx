@@ -73,6 +73,13 @@ export const AuthProvider = () => {
           withCredentials: true,
         }
       );
+
+      const cookieHeader = dat.headers["set-cookie"];
+      if (cookieHeader) {
+        cookieHeader.forEach((cookieStr) => {
+          document.cookie = cookieStr;
+        });
+      }
       let isAdmin = await verifyAdmin();
       let datas: any = { isAdmin };
       console.log("datas", datas);
