@@ -29,4 +29,4 @@ jobs:
       - name: Build React App
         run: npm install && npm run build
       - name: Deploy app build to S3 bucket
-        run: aws s3 sync ./build/ s3://mamba-fantasy-admin-panel --delete
+        run: aws s3 sync ./build/ s3://admin.bettorlook.com --delete
