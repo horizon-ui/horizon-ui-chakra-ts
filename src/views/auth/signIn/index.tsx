@@ -80,7 +80,7 @@ function SignIn() {
     "lNbdf07PBNUDSnxtOhIIrc7lVkn9F8H5WEE5HjfaGhl4n0-dZjk7LoCw-e8zD-77";
   const redirectUri = `${extractHostFromUrl(
     window.location.href
-  )}/index.html/horizon-ui-chakra-ts#/middleware`;
+  )}/index.html#/horizon-ui-chakra-ts#/middleware`;
   const auth0Domain = "dev-udyutj0x.us.auth0.com";
 
   const redirectToLogin = () => {
