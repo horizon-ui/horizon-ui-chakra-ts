@@ -25,8 +25,8 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: ${{ secrets.AWS_REGION_ADMIN }}
       - name: Build React App
         run: npm install && npm run build
       - name: Deploy app build to S3 bucket
-        run: aws s3 sync ./build/ s3://public-admin-panel --delete && aws s3 sync ./build/ s3://admin.mambafantasy.com --delete
+        run: aws s3 sync ./build/ s3://mamba-fantasy-admin-panel --delete
