@@ -81,10 +81,10 @@ export const AuthProvider = () => {
       console.log("datas", datas);
       if (isAdmin) {
         localStorage.setItem("admin_data", JSON.stringify(datas));
-        window.location.href = "/admin";
+        window.location.href = "/#/admin";
       } else {
         alert("Authentication Failed");
-        window.location.href = "/auth";
+        window.location.href = "/#/auth";
       }
       console.log("data_received", dat);
     };
