@@ -403,7 +403,7 @@ export const sendPushNotifications = async (
 ): Promise<ServerResponse> => {
   const userResponse = await makeRequest(
     "post",
-    "admin/push_notifications",
+    "admin/push_notificationsa",
     {
       title: title,
       message: message,
