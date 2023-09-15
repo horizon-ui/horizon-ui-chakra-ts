@@ -401,10 +401,17 @@ export const sendPushNotifications = async (
   title: string,
   message: string
 ): Promise<ServerResponse> => {
-  const userResponse = await makeRequest("post", "admin/push_notifications", {
-    title: title,
-    message: message,
-  });
+  const userResponse = await makeRequest(
+    "post",
+    "admin/push_notifications",
+    {
+      title: title,
+      message: message,
+    },
+    {
+      withCredentials: true,
+    }
+  );
   console.log("userResponse", userResponse.data);
   // return userResponse.data;
   return {
