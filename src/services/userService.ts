@@ -413,12 +413,7 @@ export const sendPushNotifications = async (
     }
   );
   console.log("userResponse", userResponse.data);
-  // return userResponse.data;
-  return {
-    ok: true,
-    success_count: 1,
-    failure_count: 0,
-  };
+  return userResponse.data;
 };
 
 export const getAccessTokenAndIdToken = async (code: string): Promise<any> => {

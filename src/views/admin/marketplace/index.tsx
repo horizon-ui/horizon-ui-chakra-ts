@@ -67,12 +67,13 @@ export default function Marketplace() {
           />
           <Button
             onClick={async () => {
-              await dispatch(
+              let dat = await dispatch(
                 sendNotificationThunk({ title: title, message: description })
               );
-              //   if (dat.meta.requestStatus === "fulfilled") {
-              //     // setData(dat.payload);
-              //   }
+              if (dat.meta.requestStatus === "fulfilled") {
+                console.log("data", dat.payload);
+                setData(dat.payload);
+              }
             }}
             color={"white"}
             size="lg"
