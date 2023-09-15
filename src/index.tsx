@@ -63,23 +63,19 @@ export const AuthProvider = () => {
       console.log("mamba access token", id_token.id_token);
       console.log("mamba refresh token", auth0_tokens.body.refresh_token);
 
-      const dat = await axios.post(
-        domain + "/auth0_login",
-        {
-          access_token: id_token.id_token,
-          refresh_token: auth0_tokens.body.refresh_token,
-        },
-        {
-          withCredentials: true,
-        }
-      );
-
-      const cookieHeader = dat.headers["set-cookie"];
-      if (cookieHeader) {
-        cookieHeader.forEach((cookieStr) => {
-          document.cookie = cookieStr;
-        });
-      }
+      const dat = await axios.post(domain + "/auth0_login", {
+        access_token: id_token.id_token,
+        refresh_token: auth0_tokens.body.refresh_token,
+      });
+      console.log("responseData", JSON.stringify(dat));
+      // const cookieHeader = dat.headers["set-cookie"];
+      // console.log("cookie", cookieHeader);
+      // if (cookieHeader) {
+      //   cookieHeader.forEach((cookieStr: string) => {
+      //     console.log("cookieheader", cookieStr);
+      //     document.cookie = cookieStr;
+      //   });
+      // }
       let isAdmin = await verifyAdmin();
       let datas: any = { isAdmin };
       console.log("datas", datas);
