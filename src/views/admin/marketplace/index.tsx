@@ -8,10 +8,11 @@ import {
   useColorModeValue,
   Input,
   Textarea,
+  Spinner,
 } from "@chakra-ui/react";
 import Banner from "../profile/components/Storage";
 import Card from "components/card/Card";
-import { useDispatch } from "store";
+import { useDispatch, useSelector } from "store";
 import { sendNotificationThunk } from "store/actions/userActions";
 export type ServerResponse = {
   ok: boolean;
@@ -22,6 +23,7 @@ export default function Marketplace() {
   const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [data, setData] = React.useState<ServerResponse | null>();
+  const { loading } = useSelector((state) => state.user);
   const brandColor = useColorModeValue("brand.500", "white");
   // Chakra Color Mode
   const dispatch = useDispatch();
@@ -76,7 +78,7 @@ export default function Marketplace() {
             size="lg"
             background={"blue.500"}
           >
-            Send Push Notification
+            {loading ? <Spinner /> : " Send Push Notification"}
           </Button>
         </Card>
 
