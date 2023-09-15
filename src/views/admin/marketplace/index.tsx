@@ -72,7 +72,8 @@ export default function Marketplace() {
               );
               if (dat.meta.requestStatus === "fulfilled") {
                 console.log("data", dat.payload);
-                setData(dat.payload);
+                let datPayload: ServerResponse = dat.payload;
+                setData(datPayload);
               }
             }}
             color={"white"}
