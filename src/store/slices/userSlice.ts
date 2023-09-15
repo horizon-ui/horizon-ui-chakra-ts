@@ -40,6 +40,7 @@ export interface UserState {
   timeUntilNextCheckin: string | undefined;
   loading: boolean;
   error: string | undefined;
+  pushNotificationLoading: boolean;
   lastFetch: number;
   successMessage: any;
   getUserError: string | undefined;
@@ -125,6 +126,7 @@ const initialState: UserState = {
     theme: "dark",
     tutorialSeen: false,
   },
+  pushNotificationLoading: false,
   userRegistrationData: {
     isRegistered: false,
     isCompletedRegistration: false,
@@ -263,13 +265,13 @@ export const userSlice = createSlice({
     });
 
     builder.addCase(sendNotificationThunk.rejected, (state, action) => {
-      state.loading = false;
+      state.pushNotificationLoading = false;
     });
     builder.addCase(sendNotificationThunk.pending, (state) => {
-      state.loading = true;
+      state.pushNotificationLoading = true;
     });
     builder.addCase(sendNotificationThunk.fulfilled, (state, action) => {
-      state.loading = false;
+      state.pushNotificationLoading = false;
       console.log("action", action.payload);
     });
 

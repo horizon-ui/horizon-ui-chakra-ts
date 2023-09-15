@@ -23,7 +23,7 @@ export default function Marketplace() {
   const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [data, setData] = React.useState<ServerResponse | null>();
-  const { loading } = useSelector((state) => state.user);
+  const { pushNotificationLoading } = useSelector((state) => state.user);
   const brandColor = useColorModeValue("brand.500", "white");
   // Chakra Color Mode
   const dispatch = useDispatch();
@@ -80,7 +80,7 @@ export default function Marketplace() {
             size="lg"
             background={"blue.500"}
           >
-            {loading ? <Spinner /> : " Send Notification"}
+            {pushNotificationLoading ? <Spinner /> : " Send Notification"}
           </Button>
         </Card>
 
