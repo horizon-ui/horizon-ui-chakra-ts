@@ -72,7 +72,7 @@ export default function Marketplace() {
               );
               if (dat.meta.requestStatus === "fulfilled") {
                 console.log("data", dat.payload);
-                let datPayload: ServerResponse = dat.payload;
+                let datPayload: ServerResponse = dat.payload as ServerResponse;
                 setData(datPayload);
               }
             }}
