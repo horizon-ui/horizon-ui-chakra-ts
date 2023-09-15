@@ -80,7 +80,7 @@ export default function Marketplace() {
             size="lg"
             background={"blue.500"}
           >
-            {loading ? <Spinner /> : " Send Push Notification"}
+            {loading ? <Spinner /> : " Send Notification"}
           </Button>
         </Card>
 
