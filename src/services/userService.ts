@@ -140,6 +140,34 @@ export const passwordLessLogin = async (
     throw error;
   }
 };
+export const UpdateAppVersion = async ({
+  platform,
+  version,
+}: {
+  platform: string;
+  version: string;
+}): Promise<boolean> => {
+  try {
+    const data: any = {
+      platform: platform,
+      version: version,
+    };
+
+    const updateAppResponse = await makeRequest(
+      "patch",
+      "admin/update_app_version",
+      data
+    );
+    if (updateAppResponse.status === 200) return true;
+    else return false;
+  } catch (error: any) {
+    if (error.response?.status === 401 || error.response?.status === 403)
+      throw new Error(
+        "Incorrect email and/or password. Please try again or reset password."
+      );
+    throw error;
+  }
+};
 
 export const register = async ({
   email,

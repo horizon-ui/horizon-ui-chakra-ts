@@ -79,6 +79,21 @@ export const sidebarRoutes = [
     component: NFTMarketplace,
     secondary: true,
   },
+  {
+    name: "Update App Version",
+    layout: "/admin",
+    path: "/nft-marketplace",
+    icon: (
+      <Icon
+        as={MdOutlineShoppingCart}
+        width="20px"
+        height="20px"
+        color="inherit"
+      />
+    ),
+    component: NFTMarketplace,
+    secondary: true,
+  },
 ];
 
 export default routes;

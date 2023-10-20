@@ -10,11 +10,11 @@ export const log = (...[loggString]: string[]): void => {
   return console.log("log", loggString);
 };
 
-axios.defaults.headers.common = {
-  Cookie: `mamba_access_token=${localStorage.getItem(
-    "accessToken"
-  )}; mamba_refresh_token=${localStorage.getItem("refreshToken")}`,
-};
+// axios.defaults.headers.common = {
+//   Cookie: `mamba_access_token=${localStorage.getItem(
+//     "accessToken"
+//   )}; mamba_refresh_token=${localStorage.getItem("refreshToken")}`,
+// };
 export const makeRequest = async <RequestData = any, ResponseData = any>(
   method: "get" | "post" | "delete" | "patch",
   route: string,
