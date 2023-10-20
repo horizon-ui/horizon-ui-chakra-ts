@@ -63,10 +63,16 @@ export const AuthProvider = () => {
       console.log("mamba access token", id_token.id_token);
       console.log("mamba refresh token", auth0_tokens.body.refresh_token);
 
-      const dat = await axios.post(domain + "/auth0_login", {
-        access_token: id_token.id_token,
-        refresh_token: auth0_tokens.body.refresh_token,
-      });
+      const dat = await axios.post(
+        domain + "/auth0_login",
+        {
+          access_token: id_token.id_token,
+          refresh_token: auth0_tokens.body.refresh_token,
+        },
+        {
+          withCredentials: true,
+        }
+      );
       console.log("responseData", JSON.stringify(dat));
       // const cookieHeader = dat.headers["set-cookie"];
       // console.log("cookie", cookieHeader);
