@@ -47,6 +47,7 @@ export default withAuthenticationRequired(PrivateRoute, {
   // Show a message while the user waits to be redirected to the login page.
   onRedirecting: () => <div>Redirecting you to the login page...</div>,
 });
+axios.defaults.withCredentials = true; // This ensures cookies are sent and received cross-origin
 export const AuthProvider = () => {
   useEffect(() => {
     const loadData = async () => {
@@ -63,16 +64,10 @@ export const AuthProvider = () => {
       console.log("mamba access token", id_token.id_token);
       console.log("mamba refresh token", auth0_tokens.body.refresh_token);
 
-      const dat = await axios.post(
-        domain + "/auth0_login",
-        {
-          access_token: id_token.id_token,
-          refresh_token: auth0_tokens.body.refresh_token,
-        },
-        {
-          withCredentials: true,
-        }
-      );
+      const dat = await axios.post(domain + "/auth0_login", {
+        access_token: id_token.id_token,
+        refresh_token: auth0_tokens.body.refresh_token,
+      });
       console.log("responseData", JSON.stringify(dat));
       // const cookieHeader = dat.headers["set-cookie"];
       // console.log("cookie", cookieHeader);
