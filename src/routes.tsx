@@ -67,7 +67,7 @@ export const sidebarRoutes = [
   {
     name: "Push Notifications ",
     layout: "/admin",
-    path: "/nft-marketplace",
+    path: "/push-notification",
     icon: (
       <Icon
         as={MdOutlineShoppingCart}
@@ -82,7 +82,7 @@ export const sidebarRoutes = [
   {
     name: "Update App Version",
     layout: "/admin",
-    path: "/nft-marketplace",
+    path: "/push-notification",
     icon: (
       <Icon
         as={MdOutlineShoppingCart}
