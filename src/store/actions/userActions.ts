@@ -24,6 +24,7 @@ import {
   myInformation,
   verifyAdmin,
   sendPushNotifications,
+  sendVersion,
 } from "../../services/userService";
 import { User } from "../../types/user";
 import Auth0 from "@auth0/auth0-react";
@@ -342,6 +343,12 @@ export const sendNotificationThunk = createAsyncThunk(
   "user/sendPushTokenThunk",
   ({ title, message }: { title: string; message: string }) => {
     return sendPushNotifications(title, message);
+  }
+);
+export const sendVersionThunk = createAsyncThunk(
+  "user/sendVersionThunk",
+  ({ platform, version }: { platform: string; version: string }) => {
+    return sendVersion(platform, version);
   }
 );
 

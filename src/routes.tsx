@@ -16,6 +16,7 @@ import RTL from "views/admin/rtl";
 
 // Auth Imports
 import SignInCentered from "views/auth/signIn";
+import AppVersionScreen from "views/admin/marketplace/AppVersion";
 
 const routes = [
   {
@@ -82,7 +83,7 @@ export const sidebarRoutes = [
   {
     name: "Update App Version",
     layout: "/admin",
-    path: "/push-notification",
+    path: "/update-version",
     icon: (
       <Icon
         as={MdOutlineShoppingCart}
@@ -91,7 +92,7 @@ export const sidebarRoutes = [
         color="inherit"
       />
     ),
-    component: NFTMarketplace,
+    component: AppVersionScreen,
     secondary: true,
   },
 ];

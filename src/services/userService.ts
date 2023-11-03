@@ -443,6 +443,24 @@ export const sendPushNotifications = async (
   console.log("userResponse", userResponse.data);
   return userResponse.data;
 };
+export const sendVersion = async (
+  platform: string,
+  version: string
+): Promise<ServerResponse> => {
+  const userResponse = await makeRequest(
+    "patch",
+    "admin/update_app_version",
+    {
+      platform: platform,
+      version: version,
+    },
+    {
+      withCredentials: true,
+    }
+  );
+  console.log("userResponse", userResponse.data);
+  return userResponse.data;
+};
 
 export const getAccessTokenAndIdToken = async (code: string): Promise<any> => {
   const userResponse = await makeRequest(
