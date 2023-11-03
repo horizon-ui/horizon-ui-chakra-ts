@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Chakra imports
 import {
   Box,
@@ -9,19 +9,22 @@ import {
   Input,
   Textarea,
   Spinner,
+  Select,
 } from "@chakra-ui/react";
 import Banner from "../profile/components/Storage";
 import Card from "components/card/Card";
 import { useDispatch, useSelector } from "store";
-import { sendNotificationThunk } from "store/actions/userActions";
+import {
+  sendNotificationThunk,
+  sendVersionThunk,
+} from "store/actions/userActions";
 export type ServerResponse = {
   ok: boolean;
   success_count: number;
   failure_count: number;
 };
-export default function Marketplace() {
-  const [title, setTitle] = React.useState("");
-  const [description, setDescription] = React.useState("");
+export default function AppVersionScreen() {
+  const [version, setVersion] = React.useState("");
   const [data, setData] = React.useState<ServerResponse | null>();
   const { pushNotificationLoading } = useSelector((state) => state.user);
   const brandColor = useColorModeValue("brand.500", "white");
@@ -29,6 +32,12 @@ export default function Marketplace() {
   const dispatch = useDispatch();
   const textColor = useColorModeValue("secondaryGray.900", "white");
   const textColorBrand = useColorModeValue("brand.500", "white");
+  const [platform, setPlatform] = useState<string>();
+  const handleSelectChange = (event: any) => {
+    setPlatform(event.target.value);
+    console.log(`Selected value: ${event.target.value}`);
+  };
+
   return (
     <Box pt={{ base: "180px", md: "80px", xl: "80px" }}>
       {/* Main Fields */}
@@ -43,51 +52,46 @@ export default function Marketplace() {
           mb={{ base: "0px", lg: "20px" }}
           style={{ padding: 20, borderRadius: 10 }}
         >
+          <Select placeholder="Select option" onChange={handleSelectChange}>
+            <option value="android">Android</option>
+            <option value="ioss">IOS</option>
+          </Select>
           <Input
-            placeholder="Notification Title"
-            style={{
-              border: "2px solid blue",
-              marginBottom: 10,
-            }}
-            size="lg"
-            value={title}
-            colorScheme={brandColor}
-            onChange={(event: any) => setTitle(event.target.value)}
-          />
-          <Textarea
+            type="text"
             style={{
               border: "2px solid blue",
               marginBottom: 10,
             }}
             noOfLines={100}
             size="lg"
-            value={description}
-            onChange={(e: any) => setDescription(e.target.value)}
+            value={version}
+            onChange={(e: any) => setVersion(e.target.value)}
             placeholder="Notification Body"
           />
           <Button
             onClick={async () => {
               let dat = await dispatch(
-                sendNotificationThunk({ title: title, message: description })
+                sendVersionThunk({ platform: platform, version: version })
               );
               if (dat.meta.requestStatus === "fulfilled") {
                 console.log("data", dat.payload);
                 let datPayload: ServerResponse = dat.payload as ServerResponse;
                 setData(datPayload);
+                alert("App Version Updated for " + platform);
               }
             }}
             color={"white"}
             size="lg"
             background={"blue.500"}
           >
-            {pushNotificationLoading ? <Spinner /> : " Send Notification"}
+            {pushNotificationLoading ? <Spinner /> : "Update App Version"}
           </Button>
         </Card>
 
         <Flex direction={"column"}>
-          {data && (
-            <Banner success={data.success_count} failure={data.failure_count} />
-          )}
+          {/* {data && (
+            alert.al
+          )} */}
         </Flex>
       </Grid>
       {/* Delete Product */}
